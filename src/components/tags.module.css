@@ -1,0 +1,21 @@
+
+.display {
+  display:inline-block;
+  padding-right: 6px;
+  padding-bottom: 4px;
+}
+
+.badge {
+  padding: 0.15rem 0.5rem;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.65rem;
+  color: #333;
+  background-color: #eee;
+  border-radius: 0.25rem;
+}
+
+.badge:hover {
+  color: #eee;
+  background-color: #333;
+}

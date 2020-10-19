@@ -1,0 +1,33 @@
+.projectsContainer {
+  padding: 2rem 0;
+}
+.titleContainer {
+  padding: 2rem 0;
+}
+
+.projectContainer {
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-left: 0.25rem solid #DDD;
+  margin-bottom: 3rem;
+}
+
+.projectTitle h4 {
+  margin-bottom: 0.15rem;
+}
+
+.postDate {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.descriptionContainer {
+  padding-top: 0.6rem;
+  padding-bottom: 0.75rem;
+}
+
+.descriptionContainer p {
+  margin-bottom: 0.15rem;
+}

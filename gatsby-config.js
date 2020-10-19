@@ -5,12 +5,13 @@ module.exports = {
     title: `luciyer.me`,
     author: {
       name: `Luc Iyer`,
-      summary: ``,
+      summary: `I like to find novel ways to explore and visualize data to tell stories. These days, I am working with companies like Salesforce and Cisco to build analytics software.`,
     },
     description: `The personal website of Luc Iyer.`,
     siteUrl: `https://luciyer.me`,
     social: {
       twitter: `notluciyer`,
+      linkedin: `luciyer`,
       observable: `@luciyer`,
       github: `luciyer`
     },
@@ -54,11 +55,11 @@ module.exports = {
       },
     },
     {
-       resolve: `gatsby-source-ghost`,
-       options: {
-           apiUrl: process.env.GHOST_IP,
-           contentApiKey: process.env.GHOST_API_KEY
-       }
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `wih4a7kryr66`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     }
   ],
 }

@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-
+/*
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.ghostPost
   const siteTitle = data.site.siteMetadata.title
@@ -98,3 +98,4 @@ export const pageQuery = graphql`
     }
   }
 `
+*/
