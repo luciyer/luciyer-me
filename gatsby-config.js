@@ -38,14 +38,22 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    `gatsby-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -62,13 +70,6 @@ module.exports = {
        }
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-rehype`,
       options: {
         filter: (node) =>
@@ -77,6 +78,14 @@ module.exports = {
         plugins: [
           {
             resolve: `gatsby-rehype-prismjs`,
+          },
+          {
+            resolve: `gatsby-rehype-inline-images`,
+            options: {
+                maxWidth: 1440,
+                withWebp: true,
+                useImageCache: true
+            }
           },
         ],
       },

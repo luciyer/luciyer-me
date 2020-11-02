@@ -1,9 +1,0 @@
-name: luciyer-me
-static_sites:
-- build_command: yarn build
-  environment_slug: gatsby
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: luciyer/luciyer-me
-  name: luciyer-me
