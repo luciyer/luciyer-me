@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
-const Bio = () => {
+const Footer = () => {
 
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -45,4 +45,4 @@ const Bio = () => {
   )
 }
 
-export default Bio
+export default Footer

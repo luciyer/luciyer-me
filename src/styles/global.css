@@ -1,91 +1,94 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #1E1E24;
+}
+
+* {
+  cursor: default;
+}
+
 a {
-  color: #197278;
+  transition: all 0.2s ease-in-out;
+  color: #E54F6D;
   text-decoration: none;
-  font-weight: 700;
+  cursor: pointer;
 }
 
 a:hover {
-  color: #23A0A9;
+  color: #EC8398;
+  cursor: pointer;
 }
 
-figure pre {
-  background: #EEE;
-  padding: 10px 25px;
-  border-radius: 5px;
+code[class*="language-"], pre[class*="language-"] {
+  background: white !important;
+  font-size: 0.70rem !important;
+}
+
+pre {
+  border: 1px solid #ddd !important;
+  border-radius: 0.25rem !important;
+}
+
+div.kg-code-card {
+  margin-bottom: 1.5rem !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
+  margin-bottom: 0.25rem;
 }
 
-h1 {
-  font-size: 3rem;
-}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.9rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 0.8rem; }
 
-h2 {
-  font-size: 2.25rem;
-}
-
-h3 {
-  font-size: 1.9rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 0.8rem;
-}
-
-p {
-  font-size: 1.15rem;
-}
-
-.small {
-  font-size: 0.75rem;
-}
-
-.normal {
+p, ol li, ul li {
   font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.85;
 }
 
-.light {
-  font-weight: 300;
+ol, ul {
+  margin-left: 2.5rem;
 }
 
-@media (max-width: 768px) {
+.small { font-size: 0.65rem; }
+.light { font-weight: 300; }
 
-  h1 {
-    font-size: 2rem;
+.postPageTitle {
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.postPageTags {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+
+@media (max-width: 640px) {
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.15rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.8rem; }
+
+  p, ol li, ul li { font-size: 0.8rem; }
+  ol, ul { margin-left: 1.5rem; }
+
+
+  code[class*="language-"], pre[class*="language-"] {
+    font-size: 0.6rem !important;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  h4 {
-    font-size: 1.15rem;
-  }
-
-  h5 {
-    font-size: 1rem;
-  }
-
-  h6 {
-    font-size: 0.8rem;
-  }
-
-  p {
-    font-size: 0.9rem;
+  .postPageTitle, .postPageTags {
+    text-align: left;
   }
 
 }

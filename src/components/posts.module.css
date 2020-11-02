@@ -1,0 +1,67 @@
+.postsContainer {
+  padding: 1rem 0;
+}
+
+.titleContainer {
+  padding: 2rem 0;
+}
+
+.postContainer {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.postTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem;
+  text-align: left;
+}
+
+.postTitle a {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.rightColumn {
+  text-align: right;
+}
+
+.postDetails {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.postDetails p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  padding: 0.2rem 0;
+}
+
+.postDate {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .postContainer {
+    display: block;
+  }
+  .rightColumn {
+    text-align: left;
+  }
+  .postTitle {
+    font-size: 1rem;
+  }
+  .postDetails p {
+    font-size: 0.7rem;
+    padding: 0.4rem 0;
+  }
+  .postDate {
+    font-size: 0.7rem;
+  }
+}

@@ -33,7 +33,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
@@ -55,11 +54,32 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-contentful`,
+       resolve: `gatsby-source-ghost`,
+       options: {
+         apiUrl: process.env.GHOST_CONTENT_API_URL,
+         contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+         version: `v3`
+       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
       options: {
-        spaceId: `wih4a7kryr66`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-rehype`,
+      options: {
+        filter: (node) =>
+            node.internal.type === `GhostPost` ||
+            node.internal.type === `GhostPage`,
+        plugins: [
+          {
+            resolve: `gatsby-rehype-prismjs`,
+          },
+        ],
       },
     }
-  ],
+  ]
 }

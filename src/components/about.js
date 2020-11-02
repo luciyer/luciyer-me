@@ -30,17 +30,17 @@ const About = () => {
     <div>
 
       <div className={styles.hello}>
-        <h3>Hi there. I'm Luc Iyer, a developer and tinkerer based in Buenos Aires.</h3>
+        <h3>Hi there. I&apos;m Luc Iyer, a developer and tinkerer based in Buenos Aires.</h3>
       </div>
       <div>
         <p>
           {author.summary}
         </p>
         <p>
-          Here in my adopted home in Argentina, I founded the non-profit <a href={`https://refugio.app`}>Refugio</a>, which develops management software for pet shelters.
+          Here in my adopted home of Argentina, I founded the non-profit <a href={`https://refugio.app`}>Refugio</a>, which develops management software for pet shelters.
         </p>
         <p>
-          The projects I'd like to highlight are listed below, and additional work and thoughts can be found <Link to={`/tags`}>organized by tag</Link>.
+          The projects I'd like to highlight are listed below, and a comprehensive list of posts can be found <Link to={`/posts`}>here</Link>.
         </p>
         <p>
           You can also find me on {` `}

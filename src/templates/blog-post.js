@@ -1,84 +1,37 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
-/*
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+import Tags from "../components/tags"
+
+const PostTemplate = ({ data, pageContext, location }) => {
+
   const post = data.ghostPost
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  //const { previous, next } = pageContext
+
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.title}
-        description={post.description || post.excerpt}
+        title={ post.meta_title }
+        description={ post.meta_description || post.custom_excerpt }
       />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {post.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.published_at}
-          </p>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <footer>
-          <Bio />
-        </footer>
-      </article>
-
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`/` + previous.slug} rel="prev">
-                ← {previous.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`/` + next.slug} rel="next">
-                {next.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      <div class="postContainer">
+        <section class="postPageTitle">
+          <h2>{ post.title }</h2>
+        </section>
+        <section class="postPageTags">
+          <Tags data={ post.tags }/>
+        </section>
+        <section dangerouslySetInnerHTML={{ __html: post.childHtmlRehype.html }} />
+      </div>
     </Layout>
   )
 }
 
-export default BlogPostTemplate
+export default PostTemplate
 
 export const pageQuery = graphql`
   query singlePostBySlug($slug: String!) {
@@ -88,14 +41,18 @@ export const pageQuery = graphql`
       }
     }
     ghostPost(slug: {eq: $slug}) {
+      slug
       title
-      html
-      published_at(formatString: "MMMM DD, YYYY")
+      childHtmlRehype {
+        html
+      }
+      published_at(formatString: "MMM. DD, YYYY")
       tags {
         name
         slug
       }
+      meta_description
+      meta_title
     }
   }
 `
-*/

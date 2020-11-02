@@ -7,7 +7,7 @@ const Tags = ({ data }) => {
 
     return (
       <div className={styles.display}>
-        <a href={`/tags/${slug}`}>
+        <a href={`/posts/tag/${slug}`}>
           <span className={styles.badge}>{name}</span>
         </a>
       </div>

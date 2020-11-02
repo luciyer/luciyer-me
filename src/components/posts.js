@@ -4,21 +4,16 @@ import { graphql, useStaticQuery } from "gatsby"
 import styles from "./posts.module.css"
 import Tags from "./tags"
 
-const Projects = () => {
+const Posts = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allGhostPost(filter: { featured: { eq: true } }, sort: {fields: published_at, order: DESC}) {
+      allGhostPost(sort: {fields: published_at, order: DESC}) {
         edges {
           node {
             slug
             title
-            custom_excerpt
             published_at(formatString: "MMM. DD, YYYY")
-            tags {
-              name
-              slug
-            }
           }
         }
       }
@@ -30,7 +25,7 @@ const Projects = () => {
   const postList = posts.map(({ node }) => {
 
     const {
-      slug, title, custom_excerpt, published_at, tags
+      slug, title, published_at
     } = node
 
     return (
@@ -41,13 +36,7 @@ const Projects = () => {
             </a>
           </div>
           <div className={styles.rightColumn}>
-            <span className={styles.postDate}>{ published_at }</span>
-          </div>
-          <div className={styles.postDetails}>
-            <p>{ custom_excerpt }</p>
-          </div>
-          <div className={styles.postDetails}>
-            <Tags data={tags} />
+            <span className={styles.postDate}>{published_at}</span>
           </div>
       </div>
     )
@@ -55,16 +44,11 @@ const Projects = () => {
   })
 
   return (
-    <div className={styles.projectsContainer}>
-      <div className={styles.titleContainer}>
-        <h4>Recent Highlights</h4>
-      </div>
-      <div>
-        { postList }
-      </div>
+    <div className={styles.postsContainer}>
+      { postList }
     </div>
   )
 
 }
 
-export default Projects
+export default Posts
