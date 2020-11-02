@@ -1,7 +1,6 @@
 import React from "react"
 
 import styles from "./posts.module.css"
-import Tags from "./tags"
 
 const PostsByTag = ({ postData }) => {
 
@@ -10,7 +9,7 @@ const PostsByTag = ({ postData }) => {
   const postList = posts.map(({ node }) => {
 
     const {
-      slug, title, published_at, tags
+      slug, title, published_at
     } = node
 
     return (

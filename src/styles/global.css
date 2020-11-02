@@ -30,8 +30,18 @@ pre {
   border-radius: 0.25rem !important;
 }
 
+figure.kg-card {
+  margin: 2rem auto;
+}
+
 div.kg-code-card {
   margin-bottom: 1.5rem !important;
+}
+
+div.kg-code-card, figcaption,
+pre, ol li, ul li, h1, h2, h3, h4, h5, h6 {
+  max-width: 36rem;
+  margin: auto auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,13 +57,21 @@ h5 { font-size: 1.25rem; }
 h6 { font-size: 0.8rem; }
 
 p, ol li, ul li {
+  max-width: 36rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.85;
 }
 
+li {
+  margin: 0rem auto !important;
+  padding-left: 0rem !important;
+}
+
 ol, ul {
-  margin-left: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .small { font-size: 0.65rem; }
@@ -72,6 +90,11 @@ ol, ul {
 
 @media (max-width: 640px) {
 
+  div.kg-code-card, p, pre, ol li, ul li, h1, h2, h3, h4, h5, h6 {
+    max-width: auto;
+    margin-left: auto;
+  }
+
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.3rem; }
@@ -79,8 +102,8 @@ ol, ul {
   h5 { font-size: 1rem; }
   h6 { font-size: 0.8rem; }
 
-  p, ol li, ul li { font-size: 0.8rem; }
-  ol, ul { margin-left: 1.5rem; }
+  p, ol li, ul li { font-size: 0.8rem; margin-bottom: 1rem; }
+  ol, ul { padding-left: 0.25rem; }
 
 
   code[class*="language-"], pre[class*="language-"] {

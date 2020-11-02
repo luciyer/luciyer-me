@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import styles from "./posts.module.css"
-import Tags from "./tags"
 
 const Posts = () => {
 

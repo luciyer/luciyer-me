@@ -1,16 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm } from "../utils/typography"
 import styles from "./layout.module.css"
 
 const Layout = ({ location, title, pageTitle, tag, children }) => {
 
-  const rootPath = `${__PATH_PREFIX__}/`
-
   let header
 
-  if (location.pathname === "/posts") {
+  if (location.pathname === "/posts" || location.pathname === "/posts/") {
     header = (
       <header className={styles.postHeader}>
         <div className={styles.pageTitle}>
