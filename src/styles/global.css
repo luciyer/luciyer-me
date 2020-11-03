@@ -38,6 +38,13 @@ div.kg-code-card {
   margin-bottom: 1.5rem !important;
 }
 
+p > code.language-text {
+  background: #EDEDED !important;
+  padding: 0.1rem 0.45rem !important;
+  margin-right: 0.3rem;
+  font-size: 0.85rem !important;
+}
+
 div.kg-code-card, figcaption,
 pre, ol li, ul li, h1, h2, h3, h4, h5, h6 {
   max-width: 36rem;
@@ -47,6 +54,7 @@ pre, ol li, ul li, h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 0.25rem;
+  line-height: 1.6;
 }
 
 h1 { font-size: 3rem; }
@@ -108,6 +116,10 @@ ol, ul {
 
   code[class*="language-"], pre[class*="language-"] {
     font-size: 0.6rem !important;
+  }
+
+  p > code.language-text {
+    font-size: 0.75rem !important;
   }
 
   .postPageTitle, .postPageTags {
