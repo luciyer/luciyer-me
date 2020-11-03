@@ -1,7 +1,27 @@
+:root {
+  --primary-color: #E54F6D;
+  --light-color: #EC8398;
+  --body-text: #1E1E24;
+  --flat-grey: #DDDDDD;
+  --text-grey: #666666;
+
+  --header-1: 2.5rem;
+  --header-2: 2rem;
+  --header-3: 1.4rem;
+  --header-4: 1.15rem;
+  --header-5: 1rem;
+  --header-6: 0.8rem;
+
+  --paragraph: 1rem;
+  --code: 0.7rem;
+  --inline-code: 0.85rem;
+
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: #1E1E24;
+  color: var(--body-text);
 }
 
 * {
@@ -10,19 +30,19 @@ body {
 
 a {
   transition: all 0.2s ease-in-out;
-  color: #E54F6D;
+  color: var(--primary-color);
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover {
-  color: #EC8398;
+  color: var(--light-color);
   cursor: pointer;
 }
 
 code[class*="language-"], pre[class*="language-"] {
   background: white !important;
-  font-size: 0.70rem !important;
+  font-size: var(--code) !important;
 }
 
 pre {
@@ -32,6 +52,7 @@ pre {
 
 figure.kg-card {
   margin: 2rem auto;
+  text-align: center;
 }
 
 div.kg-code-card {
@@ -42,7 +63,7 @@ p > code.language-text {
   background: #EDEDED !important;
   padding: 0.1rem 0.45rem !important;
   margin-right: 0.3rem;
-  font-size: 0.85rem !important;
+  font-size: var(--inline-code) !important;
 }
 
 div.kg-code-card, figcaption,
@@ -57,19 +78,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.25rem; }
-h3 { font-size: 1.4rem; }
-h4 { font-size: 1.15rem; }
-h5 { font-size: 1rem; }
-h6 { font-size: 0.8rem; }
+h1 { font-size: var(--header-1); }
+h2 { font-size: var(--header-2); }
+h3 { font-size: var(--header-3); }
+h4 { font-size: var(--header-4); }
+h5 { font-size: var(--header-5); }
+h6 { font-size: var(--header-6); }
 
 p, ol li, ul li {
   max-width: 36rem;
   margin: 0 auto;
   margin-bottom: 1.5rem;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: var(--paragraph);
   line-height: 1.85;
 }
 
@@ -98,29 +119,25 @@ ol, ul {
 
 @media (max-width: 640px) {
 
+  :root {
+    --header-1: 2rem;
+    --header-2: 1.5rem;
+    --header-3: 1.25rem;
+    --header-4: 1rem;
+    --header-5: 0.9rem;
+    --header-6: 0.7rem;
+    --paragraph: 0.8rem;
+    --code: 0.6rem;
+    --inline-code: 0.75rem;
+  }
+
   div.kg-code-card, p, pre, ol li, ul li, h1, h2, h3, h4, h5, h6 {
     max-width: auto;
     margin-left: auto;
   }
 
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.3rem; }
-  h4 { font-size: 1rem; }
-  h5 { font-size: 1rem; }
-  h6 { font-size: 0.8rem; }
-
-  p, ol li, ul li { font-size: 0.8rem; margin-bottom: 1rem; }
+  p, ol li, ul li { margin-bottom: 1rem; }
   ol, ul { padding-left: 0.25rem; }
-
-
-  code[class*="language-"], pre[class*="language-"] {
-    font-size: 0.6rem !important;
-  }
-
-  p > code.language-text {
-    font-size: 0.75rem !important;
-  }
 
   .postPageTitle, .postPageTags {
     text-align: left;

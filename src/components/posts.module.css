@@ -45,7 +45,7 @@
 
 .postDate {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-grey);
   text-align: right;
 }
 

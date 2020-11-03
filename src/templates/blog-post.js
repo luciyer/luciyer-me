@@ -15,7 +15,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={ post.meta_title }
+        title={ post.title }
         description={ post.meta_description || post.custom_excerpt }
       />
       <div class="postContainer">
