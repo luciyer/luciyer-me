@@ -1,4 +1,5 @@
 require("dotenv").config()
+const path = require("path")
 
 module.exports = {
   siteMetadata: {
@@ -17,43 +18,14 @@ module.exports = {
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
-    },
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    `gatsby-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -72,23 +44,24 @@ module.exports = {
     {
       resolve: `gatsby-transformer-rehype`,
       options: {
-        filter: (node) =>
-            node.internal.type === `GhostPost` ||
-            node.internal.type === `GhostPage`,
+        filter: (node) => node.internal.type === `GhostPost`,
         plugins: [
           {
-            resolve: `gatsby-rehype-prismjs`,
+            resolve: `gatsby-rehype-prismjs`
+          },
+          {
+            resolve: `gatsby-rehype-ghost-links`
           },
           {
             resolve: `gatsby-rehype-inline-images`,
             options: {
                 maxWidth: 1440,
                 withWebp: true,
-                useImageCache: true
-            }
+                useImageCache: false
+              }
           },
-        ],
-      },
+        ]
+      }
     }
   ]
 }
