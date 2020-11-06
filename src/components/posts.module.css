@@ -17,6 +17,14 @@
   margin: 0 auto;
 }
 
+.viewAll {
+  font-weight: 700;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
 .postTitle {
   font-size: 1.1rem;
   margin-bottom: 0.15rem;

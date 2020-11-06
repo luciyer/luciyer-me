@@ -61,6 +61,9 @@ const Projects = () => {
       </div>
       <div>
         { postList }
+        <div className={styles.viewAll}>
+          <a href={`/posts`}>View All Posts &rarr;</a>
+        </div>
       </div>
     </div>
   )

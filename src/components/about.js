@@ -39,7 +39,7 @@ const About = () => {
           Here in my adopted home of Argentina, I founded the non-profit Refugio, which develops management software for pet shelters.
         </p>
         <p>
-          The projects I'd like to highlight are listed below, and a comprehensive list of posts can be found <Link to={`/posts`}>here</Link>.
+          The projects I'd like to highlight are listed below, or you can  <Link to={`/posts`}>see a comprehensive list of posts</Link>.
         </p>
         <p>
           You can also find me on {` `}
