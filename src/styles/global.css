@@ -51,7 +51,7 @@ pre {
 }
 
 figure.kg-card {
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   text-align: center;
 }
 
@@ -70,6 +70,10 @@ div.kg-code-card, figcaption,
 pre, ol li, ul li, h1, h2, h3, h4, h5, h6 {
   max-width: 36rem;
   margin: auto auto;
+}
+
+img.kg-image {
+  margin-bottom: 0;
 }
 
 hr {
