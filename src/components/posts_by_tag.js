@@ -1,7 +1,5 @@
 import React from "react"
 
-import styles from "./posts.module.css"
-
 const PostsByTag = ({ postData }) => {
 
   const posts = postData.allGhostPost.edges
@@ -13,14 +11,14 @@ const PostsByTag = ({ postData }) => {
     } = node
 
     return (
-      <div className={styles.postContainer}>
-          <div className={styles.postTitle}>
+      <div>
+          <div>
             <a href={`/posts/${slug}`}>
               { title }
             </a>
           </div>
-          <div className={styles.rightColumn}>
-            <span className={styles.postDate}>{ published_at }</span>
+          <div>
+            <span>{ published_at }</span>
           </div>
       </div>
     )
@@ -28,7 +26,7 @@ const PostsByTag = ({ postData }) => {
   })
 
   return (
-    <div className={styles.postsContainer}>
+    <div>
       { postList }
     </div>
   )

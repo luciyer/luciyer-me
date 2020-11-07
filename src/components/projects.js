@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import styles from "./posts.module.css"
 import Tags from "./tags"
 
 const Projects = () => {
@@ -34,19 +33,19 @@ const Projects = () => {
     } = node
 
     return (
-      <div className={styles.postContainer}>
-          <div className={styles.postTitle}>
+      <div>
+          <div>
             <a href={`/posts/${slug}`}>
               { title }
             </a>
           </div>
-          <div className={styles.rightColumn}>
-            <span className={styles.postDate}>{ published_at }</span>
+          <div>
+            <span>{ published_at }</span>
           </div>
-          <div className={styles.postDetails}>
+          <div>
             <p>{ custom_excerpt }</p>
           </div>
-          <div className={styles.postDetails}>
+          <div>
             <Tags data={tags} />
           </div>
       </div>
@@ -55,13 +54,13 @@ const Projects = () => {
   })
 
   return (
-    <div className={styles.projectsContainer}>
-      <div className={styles.titleContainer}>
+    <div>
+      <div>
         <h4>Recent Highlights</h4>
       </div>
       <div>
         { postList }
-        <div className={styles.viewAll}>
+        <div>
           <a href={`/posts`}>View All Posts &rarr;</a>
         </div>
       </div>

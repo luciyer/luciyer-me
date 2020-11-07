@@ -1,14 +1,13 @@
 import React from "react"
-import styles from "./tags.module.css"
 
 const Tags = ({ data }) => {
 
   const tagList = data.map(({ slug, name }) => {
 
     return (
-      <div className={styles.display}>
+      <div>
         <a href={`/posts/tag/${slug}`}>
-          <span className={styles.badge}>{name}</span>
+          <span class="tag is-primary is-light">{ name }</span>
         </a>
       </div>
     )

@@ -1,6 +1,4 @@
 import React from "react"
-import styles from "./about.module.css"
-
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const About = () => {
@@ -28,7 +26,7 @@ const About = () => {
   return (
     <div>
 
-      <div className={styles.hello}>
+      <div>
         <h3>Hi there. I&apos;m Luc Iyer, a developer and tinkerer based in Buenos Aires.</h3>
       </div>
       <div>
