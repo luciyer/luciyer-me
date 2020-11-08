@@ -5,43 +5,85 @@ const Layout = ({ location, title, pageTitle, tag, children }) => {
 
   let header
 
-  if (location.pathname === "/posts" || location.pathname === "/posts/") {
+  const isPost = (
+    location.pathname.startsWith("/posts/") &&
+    !location.pathname.startsWith("/posts/tag/")
+  );
+
+  const isPosts =  (
+    location.pathname === "/posts" ||
+    location.pathname === "/posts/"
+  );
+
+  const isTag = (
+    location.pathname.startsWith("/posts/tag/")
+  );
+
+  if (isPosts) {
     header = (
-      <header>
-        <div>
-          <Link to={`/`}>Home</Link> &rarr; { pageTitle }
+      <section class="section pt-6 pb-5">
+        <div class="container">
+          <header class="readable">
+            <nav class="breadcrumb is-medium has-text-weight-semibold has-arrow-separator" aria-label="breadcrumbs">
+              <ul>
+                <li><Link to={`/`}>Home</Link></li>
+                <li class="is-active"><a href="#" aria-current="page">Posts</a></li>
+              </ul>
+            </nav>
+          </header>
         </div>
-      </header>
+      </section>
     )
-  } else if (location.pathname.startsWith("/posts/tag/")) {
+  } else if (isTag) {
     header = (
-      <header>
-        <div>
-          <Link to={`/`}>Home</Link> &rarr; <Link to={`/posts`}>Posts</Link> &rarr; { tag }
+      <section class="section pt-6 pb-5">
+        <div class="container">
+          <header class="readable">
+            <nav class="breadcrumb is-medium has-text-weight-semibold has-arrow-separator" aria-label="breadcrumbs">
+              <ul>
+                <li><Link to={`/`}>Home</Link></li>
+                <li><Link to={`/posts`}>Posts</Link></li>
+                <li class="is-active"><a href="#" aria-current="page">{ tag }</a></li>
+              </ul>
+            </nav>
+          </header>
         </div>
-      </header>
+      </section>
     )
-  } else if (location.pathname.startsWith("/posts/") && !location.pathname.startsWith("/posts/tag/")) {
+  } else if (isPost) {
     header = (
-      <header>
-        <div>
-          <Link to={`/`}>Home</Link> &rarr; <Link to={`/posts`}>Posts</Link>
+      <section class="section pt-6 pb-5">
+        <div class="container">
+          <header class="readable">
+            <nav class="breadcrumb is-medium has-text-weight-semibold has-arrow-separator" aria-label="breadcrumbs">
+              <ul>
+                <li><Link to={`/`}>Home</Link></li>
+                <li><Link to={`/posts`}>Posts</Link></li>
+                <li class="is-active"></li>
+              </ul>
+            </nav>
+          </header>
         </div>
-      </header>
+      </section>
     )
   } else {
-    header = (
-      <header></header>
-    )
+    header = null;
   }
 
   return (
-    <div>
+    <div class="container">
       { header }
-      <main>{children}</main>
-      <footer></footer>
+      <section class="section pt-4">
+        <div class="container">
+          <div class="content">
+            { children }
+          </div>
+        </div>
+      </section>
+      <footer />
     </div>
   )
+
 }
 
 export default Layout

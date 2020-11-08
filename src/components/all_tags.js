@@ -21,16 +21,20 @@ const AllTags = () => {
     const { slug, name } = node
 
     return (
-      <div>
+      <div class="is-inline-block">
         <a href={`/posts/tag/${slug}`}>
-          <span>{name}</span>
+          <span class="tag is-primary is-light mr-2 mb-2">{ name }</span>
         </a>
       </div>
     )
 
   })
 
-  return (<div>{tagList}</div>)
+  return (
+    <div class="content readable pb-5">
+      {tagList}
+    </div>
+  )
 
 }
 

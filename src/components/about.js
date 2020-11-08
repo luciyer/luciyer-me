@@ -24,12 +24,16 @@ const About = () => {
   const { author, social } = data.site.siteMetadata
 
   return (
-    <div>
+    <div class="content readable">
 
-      <div>
-        <h3>Hi there. I&apos;m Luc Iyer, a developer and tinkerer based in Buenos Aires.</h3>
-      </div>
-      <div>
+        <div class="spacer is-hidden-mobile" style={{ paddingTop: "8vh" }} />
+
+        <h1 class="title my-6-desktop py-4 has-text-weight-bold">
+          Hi there. I&apos;m Luc Iyer.
+        </h1>
+
+        <div class="spacer is-hidden-mobile" style={{ paddingBottom: "4vh" }} />
+
         <p>
           {author.summary}
         </p>
@@ -41,12 +45,13 @@ const About = () => {
         </p>
         <p>
           You can also find me on {` `}
-          <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>{`, `}
-          <a href={`https://linkedin.com/in/${social.linkedin}`}>LinkedIn</a>{`, `}
-          <a href={`https://observablehq.com/${social.observable}`}>Observable</a>{`, and `}
+          <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>{` and `}
+          <a href={`https://linkedin.com/in/${social.linkedin}`}>LinkedIn</a>{`, and more of my work on `}
+          <a href={`https://observablehq.com/${social.observable}`}>Observable</a>{` and `}
           <a href={`https://github.com/${social.github}`}>Github</a>.
         </p>
-      </div>
+
+        <div class="spacer is-hidden-mobile" style={{ paddingBottom: "4vh" }} />
 
     </div>
   )

@@ -35,7 +35,12 @@ export const pageQuery = graphql`
         node {
           slug
           title
+          custom_excerpt
           published_at(formatString: "MMM. YYYY")
+          tags {
+            slug
+            name
+          }
         }
       }
     }
