@@ -29,7 +29,7 @@ const About = () => {
         <div class="spacer is-hidden-mobile" style={{ paddingTop: "8vh" }} />
 
         <h1 class="title my-6-desktop py-4 has-text-weight-bold">
-          Hi there. I&apos;m Luc Iyer.
+          Hi there! <div class="is-inline-desktop">I&apos;m Luc Iyer.</div>
         </h1>
 
         <div class="spacer is-hidden-mobile" style={{ paddingBottom: "4vh" }} />
