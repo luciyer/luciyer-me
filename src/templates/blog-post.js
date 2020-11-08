@@ -18,14 +18,17 @@ const PostTemplate = ({ data, pageContext, location }) => {
         title={ post.title }
         description={ post.meta_description || post.custom_excerpt }
       />
-      <div class="postContainer">
-        <section class="postPageTitle">
-          <h2>{ post.title }</h2>
-        </section>
-        <section class="postPageTags">
-          <Tags data={ post.tags }/>
-        </section>
+      <div class="content postBody">
+
+        <div class="postTitleAndTags has-text-centered has-text-left-mobile pb-5">
+          <h2 class="pb-3">{ post.title }</h2>
+          <div class="postTags pb-5 has-text-center">
+            <Tags data={ post.tags }/>
+          </div>
+        </div>
+
         <section dangerouslySetInnerHTML={{ __html: post.childHtmlRehype.html }} />
+
       </div>
     </Layout>
   )

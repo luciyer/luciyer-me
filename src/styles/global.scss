@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+$primary: #E54F6D;
+$link: #E54F6D;
+$link-hover: #EC8398;
+$link-visited: #E54F6D;
+$body-line-height: 1.7;
+$text: #1E1E24;
+$size-6: 1.1rem;
+$size-7: 0.9rem;
+
+$family-primary: "Martel Sans",
+                 "BlinkMacSystemFont",
+                 "-apple-system",
+                 "Segoe UI",
+                 "Roboto",
+                 "Oxygen",
+                 "Ubuntu",
+                 "Cantarell",
+                 "Fira Sans",
+                 "Droid Sans",
+                 "Helvetica Neue",
+                 "Helvetica",
+                 "Arial", "sans-serif";
+
+$family-secondary: "Martel Sans",
+                   "BlinkMacSystemFont",
+                   "-apple-system",
+                   "Segoe UI",
+                   "Roboto",
+                   "Oxygen",
+                   "Ubuntu",
+                   "Cantarell",
+                   "Fira Sans",
+                   "Droid Sans",
+                   "Helvetica Neue",
+                   "Helvetica",
+                   "Arial", "sans-serif";
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.readable {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.postBody  {
+
+  .postTags,
+  .kg-code-card,
+  figcaption,
+  pre,
+  p, h1, h2, h3, h4, h5, h6, ul li, ol li {
+    margin: 0 auto;
+    max-width: 48rem;
+  }
+
+  ul, ol {
+    padding-left: 2rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 2rem;
+  }
+
+  img {
+    margin: 0 auto;
+    max-width: 64rem;
+  }
+
+}
+
+/* Overwrite */
+.number {
+  align-items: left;
+  background-color: #FFF !important;
+  border-radius: 0 !important;
+  display: inline-flex;
+  font-size: inherit !important;
+  height: inherit !important;
+  justify-content: center;
+  margin-right: 0 !important;
+  min-width: 0 !important;
+  padding: inherit !important;
+  text-align: left !important;
+  vertical-align: top;
+}
+
+.kg-image-card {
+  margin: 1.5rem 0 !important;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  background: white !important;
+  font-size: 0.8rem !important;
+}
+
+pre {
+  border: 1px solid #ddd !important;
+  border-radius: 0.25rem !important;
+}
+
+p > code.language-text {
+  background: #EDEDED !important;
+  padding: 0.1rem 0.45rem !important;
+  margin-right: 0.3rem;
+  font-size: 0.85rem !important;
+}
+
+@import "~bulma/bulma.sass";

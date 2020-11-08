@@ -1,9 +1,0 @@
-.hello {
-  padding-bottom: 5vh;
-}
-
-@media (max-width: 640px) {
-  .hello {
-    padding-bottom: 2vh;
-  }
-}

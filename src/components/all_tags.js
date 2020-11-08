@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./tags.module.css"
 
 const AllTags = () => {
 
@@ -22,16 +21,20 @@ const AllTags = () => {
     const { slug, name } = node
 
     return (
-      <div className={styles.display}>
+      <div class="is-inline-block">
         <a href={`/posts/tag/${slug}`}>
-          <span className={styles.badge}>{name}</span>
+          <span class="tag is-primary is-light mr-2 mb-2">{ name }</span>
         </a>
       </div>
     )
 
   })
 
-  return (<div className={styles.tagContainer}>{tagList}</div>)
+  return (
+    <div class="content readable pb-5">
+      {tagList}
+    </div>
+  )
 
 }
 

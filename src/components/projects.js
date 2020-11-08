@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import styles from "./posts.module.css"
 import Tags from "./tags"
 
 const Projects = () => {
@@ -34,35 +33,39 @@ const Projects = () => {
     } = node
 
     return (
-      <div className={styles.postContainer}>
-          <div className={styles.postTitle}>
-            <a href={`/posts/${slug}`}>
+      <div class="card my-6-desktop my-5">
+        <header class="card-header">
+          <a href={`/posts/${slug}`}>
+            <h5 class="card-header-title mb-0 mt-1 has-text-primary">
               { title }
-            </a>
-          </div>
-          <div className={styles.rightColumn}>
-            <span className={styles.postDate}>{ published_at }</span>
-          </div>
-          <div className={styles.postDetails}>
+            </h5>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <time class="is-block pb-3 has-text-grey is-size-7" datetime={published_at}>{ published_at }</time>
             <p>{ custom_excerpt }</p>
-          </div>
-          <div className={styles.postDetails}>
             <Tags data={tags} />
           </div>
+        </div>
       </div>
     )
 
   })
 
   return (
-    <div className={styles.projectsContainer}>
-      <div className={styles.titleContainer}>
-        <h4>Recent Highlights</h4>
+    <div class="content readable">
+      <div>
+        <h3 class="pt-5 pb-4">Recent Highlights</h3>
       </div>
       <div>
         { postList }
-        <div className={styles.viewAll}>
-          <a href={`/posts`}>View All Posts &rarr;</a>
+        <div class="py-5">
+          <a href={`/posts`}>
+            <h5 class="has-text-primary pl-3">
+              View All Posts &rarr;
+            </h5>
+          </a>
         </div>
       </div>
     </div>
