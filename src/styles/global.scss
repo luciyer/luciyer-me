@@ -50,14 +50,8 @@ body {
 
 .postBody  {
 
-  .postTags,
-  .kg-code-card,
-  figcaption,
-  pre,
-  p, h1, h2, h3, h4, h5, h6, ul li, ol li {
-    margin: 0 auto;
-    max-width: 48rem;
-  }
+  margin: 0 auto;
+  max-width: 48rem;
 
   ul, ol {
     padding-left: 2rem;
@@ -65,11 +59,6 @@ body {
 
   h1, h2, h3, h4, h5, h6 {
     padding-top: 2rem;
-  }
-
-  img {
-    margin: 0 auto;
-    max-width: 64rem;
   }
 
 }
