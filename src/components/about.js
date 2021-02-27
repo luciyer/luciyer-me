@@ -38,9 +38,6 @@ const About = () => {
           {author.summary}
         </p>
         <p>
-          Here in my adopted home of Argentina, I founded the non-profit <a href="https://refugio.app">Refugio</a>, which develops management software for pet shelters.
-        </p>
-        <p>
           The projects I'd like to highlight are listed below, or you can  <Link to={`/posts`}>see a comprehensive list of posts</Link>.
         </p>
         <p>
